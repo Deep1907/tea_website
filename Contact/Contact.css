@@ -1,0 +1,41 @@
+.nav-item{
+	border:3px solid black;
+	background-color: #fff;
+	margin:15px 20px;
+	font-weight:bold;
+}
+.nav-link{
+	color:#000 !important;
+	font-family: "Oleo Script", system-ui;
+}
+.nav-link.active{
+	background-color: grey;
+}
+.c_left{
+	display: flex;align-items: center;justify-content: center;border:1px solid #333;
+}
+.soc a i{
+	font-size: 25px;
+	margin:8px 20px;
+	color:#000;
+}
+.c_left h6{
+	font-size: 20px;
+}
+.c_left p{
+	font-size: 20px;
+	text-align: center;
+}
+.soc{
+	border:1px solid #333;
+}
+
+
+.contact{
+	background-color: #d0f9db;
+}
+.anime{
+	height:350px;
+	width: 100%;
+	object-fit: cover;
+}

@@ -1,0 +1,111 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	/*background-color:#9ffcb8 !important;*/
+	background-color: #d0f9db !important
+}
+.banner {
+  height: 500px;
+  overflow: hidden; /* Prevents overflow if video exceeds height */
+  position: relative;
+}
+
+.banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the section */
+  display: block;
+  position: relative;
+}
+.header_text{
+	position: absolute;
+	top:0;
+	left:50%;
+	transform: translateX(-50%);
+	color:#fff;
+	font-family: "Oleo Script", system-ui;
+}
+.nav-item{
+	border:3px solid black;
+	background-color: #fff;
+	margin:15px 20px;
+	font-weight:bold;
+}
+.nav-link{
+	color:#000 !important;
+	font-family: "Oleo Script", system-ui;
+}
+.nav-link.active{
+	background-color: grey;
+}
+.main_header{
+	margin:50px 0;
+}
+.main_head h2{
+	font-size: 35px;
+	font-family: "Oleo Script", system-ui;
+}
+.main_head p{
+	font-size: 20px;
+	font-family: "Oleo Script", system-ui;
+}
+.head_vid{
+  height: 400px;
+  overflow: hidden; /* Prevents overflow if video exceeds height */
+  position: relative;
+}
+.head_vid video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the section */
+  display: block;
+  position: relative;
+}
+
+.btn_cmn{
+	background-color: green !important;
+	padding: 15px 30px !important;
+	color:#fff !important;
+	border:none !important;
+	outline: none !important;
+	font-size: 20px !important;
+	margin:20px 0;
+}
+
+
+
+
+.owl-dots{
+	text-align: center;
+	margin:10px 0;
+}
+.owl-dot{
+	border:8px solid #ddd !important;
+	border-radius: 50%;
+	margin:5px 5px;
+}
+.owl-dot.active{
+	border: 8px solid green !important;
+}
+.tea_gallery {
+	height:250px;
+	width: 250px;
+	object-fit: cover;
+}
+.carousel_img{
+	margin:20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
