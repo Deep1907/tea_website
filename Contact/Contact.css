@@ -39,3 +39,9 @@
 	width: 100%;
 	object-fit: cover;
 }
+
+@media only screen and (max-width: 767px){
+	.navvs{
+		margin:0 auto !important;
+	}
+}
