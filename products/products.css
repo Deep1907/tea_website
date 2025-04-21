@@ -171,3 +171,14 @@
       font-weight: bold;
     }
     
+
+    @media only screen and (max-width: 767px){
+            .prod_wrap {
+              flex-direction: column;
+              gap:20px;
+              padding: 10px;
+            }
+            .equal-sign{
+              transform: rotate(90deg);
+            }
+    }
