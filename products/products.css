@@ -174,11 +174,11 @@
 
     @media only screen and (max-width: 767px){
             .prod_wrap {
-              flex-direction: column;
-              gap:20px;
-              padding: 10px;
+              flex-direction: column !important;
+              gap:20px !important;
+              padding: 10px !important;
             }
             .equal-sign{
-              transform: rotate(90deg);
+              transform: rotate(90deg) !important;
             }
     }
