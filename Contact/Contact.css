@@ -40,8 +40,16 @@
 	object-fit: cover;
 }
 
+.map iframe{
+	width:500px;
+	height:400px;
+}
+
 @media only screen and (max-width: 767px){
 	.navvs{
 		margin:0 auto !important;
+	}
+	.map iframe{
+		width:100%;
 	}
 }
