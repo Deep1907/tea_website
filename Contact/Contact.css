@@ -53,3 +53,55 @@
 		width:100%;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.offr{
+	position: relative;
+}
+ .star-badge {
+      position: absolute;
+      width: 200px; /* Adjust size */
+      height: 200px;
+      background: url("../images/star1.png") no-repeat center/contain;
+      filter: hue-rotate(320deg) saturate(5); /* turns green star to RED */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: scaleUp 2s infinite alternate ease-in-out;
+      top:50px;
+      left:0;
+    }
+
+    .star-text {
+      color: white;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.2);
+      }
+    }

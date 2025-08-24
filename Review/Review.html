@@ -293,7 +293,7 @@
   <div class="testimonials-grid"></div>
 </div>
 
-<script>
+<!-- <script>
   const testimonials = [];
 
   function createTestimonialCard(testimonial) {
@@ -339,7 +339,105 @@
     renderTestimonials();
     this.reset();
   });
+</script> -->
+
+<script>
+  const testimonials = [];
+  let isAdmin = false; // ✅ track if admin is logged in
+
+  // ✅ Simple admin login
+  function adminLogin() {
+    const password = prompt("Enter admin password:");
+    if (password === "admin123") {   // 🔑 set your own password here
+      isAdmin = true;
+      renderTestimonials();
+      alert("✅ Admin logged in successfully");
+    } else {
+      alert("❌ Wrong password");
+    }
+  }
+
+  function createTestimonialCard(testimonial, index) {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card';
+
+    const name = document.createElement('h5');
+    name.textContent = testimonial.name;
+
+    const text = document.createElement('p');
+    text.textContent = `"${testimonial.review}"`;
+
+    const rating = document.createElement('div');
+    rating.className = 'rating';
+    for (let i = 0; i < 5; i++) {
+      const star = document.createElement('span');
+      star.textContent = i < testimonial.rating ? "★" : "☆";
+      rating.appendChild(star);
+    }
+
+    // ✅ Admin Reply Section
+    const replyBox = document.createElement('div');
+    replyBox.className = "mt-3";
+
+    if (testimonial.reply) {
+      const replyText = document.createElement('p');
+      replyText.innerHTML = `<strong>Admin Reply:</strong> ${testimonial.reply}`;
+      replyBox.appendChild(replyText);
+    } else if (isAdmin) { 
+      // Only show reply input if logged in as admin
+      const replyInput = document.createElement('input');
+      replyInput.type = "text";
+      replyInput.placeholder = "Write admin reply...";
+      replyInput.className = "form-control mb-2";
+
+      const replyBtn = document.createElement('button');
+      replyBtn.textContent = "Reply";
+      replyBtn.className = "btn btn-sm btn-secondary";
+
+      replyBtn.addEventListener("click", () => {
+        if (replyInput.value.trim() !== "") {
+          testimonials[index].reply = replyInput.value;
+          renderTestimonials(); 
+        }
+      });
+
+      replyBox.append(replyInput, replyBtn);
+    }
+
+    card.append(name, text, rating, replyBox);
+    return card;
+  }
+
+  function renderTestimonials() {
+    const container = document.querySelector('.testimonials-grid');
+    container.innerHTML = "";
+    testimonials.forEach((testimonial, index) => {
+      container.appendChild(createTestimonialCard(testimonial, index));
+    });
+  }
+
+  document.getElementById("reviewForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const newReview = {
+      name: document.getElementById("name").value,
+      review: document.getElementById("review").value,
+      rating: parseInt(document.getElementById("rating").value),
+      reply: null 
+    };
+
+    testimonials.push(newReview);
+    renderTestimonials();
+    this.reset();
+  });
 </script>
+
+<!-- ✅ Add Admin Login Button -->
+<div class="text-center my-3">
+  <button onclick="adminLogin()" class="btn btn-danger">Admin Login</button>
+</div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
