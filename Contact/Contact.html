@@ -19,16 +19,16 @@
 
 		<link rel="stylesheet" type="text/css" href="Contact.css">
 
-		<script type="text/javascript"
+		<!-- <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-		</script>
-		<script type="text/javascript">
+		</script> -->
+		<!-- <script type="text/javascript">
 		   (function(){
 		      emailjs.init({
 		        publicKey: "6Zv-vlsBZsPvpsjpd",
 		      });
 		   })();
-		</script>
+		</script> -->
 
 
 	</head>
@@ -143,7 +143,7 @@
 
 		
 
-		<script>
+		<!-- <script>
 			function sendMail(){
 				let params = {
 					name : document.getElementById("name").value,
@@ -154,7 +154,27 @@
 
 				emailjs.send("service_xmahoor","template_3vymavw",params).then(alert("Email Sent"))
 			}
-		</script>	
+		</script> -->	
+
+
+		<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("6Zv-vlsBZsPvpsjpd"); // replace with your EmailJS Public Key
+  })();
+
+  document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_xmahoor", "template_3vymavw", this)
+      .then(() => {
+        alert("✅ Message sent successfully!");
+      }, (error) => {
+        alert("❌ Failed to send: " + JSON.stringify(error));
+      });
+  });
+</script>
+
 		
 
 	</body>	
