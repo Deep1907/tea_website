@@ -18,6 +18,19 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" type="text/css" href="Contact.css">
+
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+		   (function(){
+		      emailjs.init({
+		        publicKey: "6Zv-vlsBZsPvpsjpd",
+		      });
+		   })();
+		</script>
+
+
 	</head>
 	<body>
 
@@ -101,10 +114,10 @@
 					<div class="col-md-6">
 						<h2 class="mb-4">ANY QUERIES ?</h2>
 						<form class="form-group" id="form">
-							<input type="text" name="name" class="form-control" placeholder="Your Name" /> <br />
-							<input type="email" name="email" class="form-control" placeholder="Your Email" /> <br />
-							<input type="text" name="message" class="form-control" placeholder="Your Query" /> <br />
-							<button type="submit" class="btn btn-success">Submit</button>
+							<input type="text" name="name" id="name" class="form-control" placeholder="Your Name" /> <br />
+							<input type="email" name="email" id="email" class="form-control" placeholder="Your Email" /> <br />
+							<input type="text" name="message" id="message" class="form-control" placeholder="Your Query" /> <br />
+							<button type="submit" class="btn btn-success" onclick="sendMail()">Submit</button>
 						</form>	
 					</div>
 					<div class="col-md-6">
@@ -130,7 +143,18 @@
 
 		
 
+		<script>
+			function sendMail(){
+				let params = {
+					name : document.getElementById("name").value,
+					email : document.getElementById("email").value,
+					message : document.getElementById("message").value,
+					
+				}
 
+				emailjs.send("service_xmahoor","template_3vymavw",params).then(alert("Email Sent"))
+			}
+		</script>	
 		
 
 	</body>	
