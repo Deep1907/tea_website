@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title></title>
@@ -49,101 +49,37 @@
 				</nav>
 		</section>
 
-		  <section class="testimonials mb-5">
-		  	<div class="container">
-			    <h2 class="my-5">Clients Feedback </h2>
-			    <div class="testimonials-grid">
-			 
-			    </div>
-			</div>
-		  </section>
+		 
 
+ <div class="review-section">
+    <h2 class="title">Customer Reviews</h2>
 
+    <div class="review">
+      <h4>Ravi Sharma</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <p>This chai patti is simply the best! Fresh aroma and strong taste. Highly recommended.</p>
+    </div>
+
+    <div class="review">
+      <h4>Priya Mehta</h4>
+      <div class="rating">⭐⭐⭐⭐</div>
+      <p>Very good quality tea. Smooth taste and refreshing flavor. A little strong, but I liked it.</p>
+    </div>
+
+    <div class="review">
+      <h4>Amit Verma</h4>
+      <div class="rating">⭐⭐⭐</div>
+      <p>Decent quality for the price. Aroma is nice, but I prefer a stronger brew.</p>
+    </div>
+
+  </div>
 
 
 
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-		<script>
-			const testimonials = [
-			  {
-			    name: "Sarah K.",
-			    role: "UX Designer",
-			    company: "Brello",
-			    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
-			    rating: 5,
-			    testimonial: "I was looking for a way to streamline my design process and the Anima's Landing Page UI Kit was a lifesaver! The intuitive design and ease of customisation have saved me hours of time and effort. Highly recommend!"
-			  },
-			  {
-			    name: "Michael L.",
-			    role: "Creative Director",
-			    company: "Yo",
-			    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
-			    rating: 4,
-			    testimonial: "The Landing Page UI Kit has been a game changer for my agency. The pre-designed components and templates have helped us deliver projects faster and with more consistency. Great job!"
-			  },
-			  {
-			    name: "Lauren M.",
-			    role: "UI Designer",
-			    company: "Boo",
-			    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200",
-			    rating: 5,
-			    testimonial: "Anima's Landing Page UI Kit has become a staple in my design toolkit. Whether I'm working on a new project or need to make updates to an existing one, this kit has everything I need to get the job done quickly and efficiently."
-			  }
-			];
-
-			const starSVG = `
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-			  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-			</svg>
-			`;
-
-			function createTestimonialCard(testimonial) {
-			  const card = document.createElement('div');
-			  card.className = 'testimonial-card';
-
-			  const img = document.createElement('img');
-			  img.src = testimonial.image;
-			  img.alt = testimonial.name;
-			  img.className = 'testimonial-image';
-
-			  const name = document.createElement('h3');
-			  name.className = 'testimonial-name';
-			  name.textContent = testimonial.name;
-
-			  const role = document.createElement('p');
-			  role.className = 'testimonial-role';
-			  role.textContent = `${testimonial.role} @${testimonial.company}`;
-
-			  const text = document.createElement('p');
-			  text.className = 'testimonial-text';
-			  text.textContent = `"${testimonial.testimonial}"`;
-
-			  const rating = document.createElement('div');
-			  rating.className = 'rating';
-			  
-			  for (let i = 0; i < 5; i++) {
-			    const star = document.createElement('div');
-			    star.className = `star ${i < testimonial.rating ? 'filled' : 'empty'}`;
-			    star.innerHTML = starSVG;
-			    rating.appendChild(star);
-			  }
-
-			  card.append(img, name, role, text, rating);
-			  return card;
-			}
-
-			function initTestimonials() {
-			  const container = document.querySelector('.testimonials-grid');
-			  testimonials.forEach(testimonial => {
-			    container.appendChild(createTestimonialCard(testimonial));
-			  });
-			}
-
-			document.addEventListener('DOMContentLoaded', initTestimonials);
-		</script>
-
+	
 
 
 
@@ -157,7 +93,6 @@
 
 	</body>	
 </html>
- -->
 
 
 
@@ -200,6 +135,7 @@
 
 
 
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -232,7 +168,6 @@
 </head>
 <body class="bg-light">
 
-<!-- ✅ Navbar -->
 <section>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -265,7 +200,7 @@
 				  </div>
 				</nav>
 		</section>
-<!-- ✅ Review Form -->
+
 <div class="container py-5">
   <h2 class="mb-4 text-center">Add Your Review</h2>
   <form id="reviewForm" class="p-4 bg-white shadow rounded">
@@ -288,67 +223,21 @@
     <button type="submit" class="btn btn-primary w-100">Submit Review</button>
   </form>
 
-  <!-- ✅ Testimonials -->
+
   <h2 class="my-5 text-center">Clients Feedback</h2>
   <div class="testimonials-grid"></div>
 </div>
 
-<!-- <script>
-  const testimonials = [];
 
-  function createTestimonialCard(testimonial) {
-    const card = document.createElement('div');
-    card.className = 'testimonial-card';
-
-    const name = document.createElement('h5');
-    name.textContent = testimonial.name;
-
-    const text = document.createElement('p');
-    text.textContent = `"${testimonial.review}"`;
-
-    const rating = document.createElement('div');
-    rating.className = 'rating';
-    for (let i = 0; i < 5; i++) {
-      const star = document.createElement('span');
-      star.textContent = i < testimonial.rating ? "★" : "☆";
-      rating.appendChild(star);
-    }
-
-    card.append(name, text, rating);
-    return card;
-  }
-
-  function renderTestimonials() {
-    const container = document.querySelector('.testimonials-grid');
-    container.innerHTML = "";
-    testimonials.forEach(testimonial => {
-      container.appendChild(createTestimonialCard(testimonial));
-    });
-  }
-
-  document.getElementById("reviewForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const newReview = {
-      name: document.getElementById("name").value,
-      review: document.getElementById("review").value,
-      rating: parseInt(document.getElementById("rating").value)
-    };
-
-    testimonials.push(newReview);
-    renderTestimonials();
-    this.reset();
-  });
-</script> -->
 
 <script>
   const testimonials = [];
-  let isAdmin = false; // ✅ track if admin is logged in
+  let isAdmin = false; 
 
-  // ✅ Simple admin login
+
   function adminLogin() {
     const password = prompt("Enter admin password:");
-    if (password === "admin123") {   // 🔑 set your own password here
+    if (password === "admin123") {  
       isAdmin = true;
       renderTestimonials();
       alert("✅ Admin logged in successfully");
@@ -375,7 +264,7 @@
       rating.appendChild(star);
     }
 
-    // ✅ Admin Reply Section
+   
     const replyBox = document.createElement('div');
     replyBox.className = "mt-3";
 
@@ -384,7 +273,7 @@
       replyText.innerHTML = `<strong>Admin Reply:</strong> ${testimonial.reply}`;
       replyBox.appendChild(replyText);
     } else if (isAdmin) { 
-      // Only show reply input if logged in as admin
+
       const replyInput = document.createElement('input');
       replyInput.type = "text";
       replyInput.placeholder = "Write admin reply...";
@@ -432,7 +321,6 @@
   });
 </script>
 
-<!-- ✅ Add Admin Login Button -->
 <div class="text-center my-3">
   <button onclick="adminLogin()" class="btn btn-danger">Admin Login</button>
 </div>
@@ -456,7 +344,7 @@
 
 
 
-
+ -->
 
 
 
